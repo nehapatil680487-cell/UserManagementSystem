@@ -126,7 +126,7 @@ UserManagementSystem/
 | Service | URL |
 |----------|------|
 | Frontend | http://localhost:3000 |
-| Backend API | http://localhost:8082 |
+| Backend API | http://localhost:8082/users|
 | MySQL Database | localhost:3306 |
 
 ---
