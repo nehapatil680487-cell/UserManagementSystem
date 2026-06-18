@@ -121,7 +121,7 @@ UserManagementSystem/
 
 ---
 
-## 🌐 Application URLs
+## Application URLs
 
 | Service | URL |
 |----------|------|
@@ -133,12 +133,12 @@ UserManagementSystem/
 
 ## ⚙️ Running the Application Locally
 
-### 1️⃣ Clone Repository
+### 1️ Clone Repository
 
 ```bash
 git clone https://github.com/nehapatil680487-cell/UserManagementSystem.git
 
-### 2️⃣ Run Backend
+### 2️ Run Backend
 
 ```bash
 cd Usermanagementbackend
@@ -151,7 +151,7 @@ Backend runs on:
 http://localhost:8082
 ```
 
-### 3️⃣ Run Frontend
+### 3️ Run Frontend
 
 ```bash
 cd user_mgt_frontend
@@ -167,7 +167,7 @@ http://localhost:3000
 
 ---
 
-## 🐳 Running with Docker
+##  Running with Docker
 
 ### Build and Start Containers
 
@@ -203,31 +203,31 @@ docker ps
 
 ## 📸 Project Screenshots
 
-### 🏠 Home Page
+###  Home Page
 
 ![Home Page](screenshots/home.png)
 
 ---
 
-### ➕ Add User Page
+###  Add User Page
 
 ![Add User](screenshots/register.png)
 
 ---
 
-### ✏️ Update User Page
+###  Update User Page
 
 ![Update User](screenshots/edit.png)
 
 ---
 
-### 🐳 Docker Containers Running
+###  Docker Containers Running
 
 ![Docker Containers](screenshots/docker.png)
 
 ---
 
-## 🎯 Learning Outcomes
+##  Learning Outcomes
 
 This project helped in understanding:
 
@@ -242,25 +242,11 @@ This project helped in understanding:
 
 ---
 
-## 🔮 Future Enhancements
-
-- JWT Authentication & Authorization
-- Search & Filter Users
-- Pagination
-- Role-Based Access Control
-- Email Notifications
-- Cloud Deployment (AWS/Azure)
 
 
-
-
-
-
-
----
 
 <div align="center">
 
-### 🚀 Built with Spring Boot, React, MySQL & Docker
+###  Built with Spring Boot, React, MySQL & Docker
 
 </div>
