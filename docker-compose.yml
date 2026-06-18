@@ -1,0 +1,73 @@
+version: "3.8"
+
+services:
+
+  mysql-container:
+    image: mysql:8
+    container_name: mysql-container
+    restart: always
+
+    environment:
+      MYSQL_ROOT_PASSWORD: System
+      MYSQL_DATABASE: sitdemo
+
+    ports:
+      - "3307:3306"
+
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+    networks:
+      - user-network
+
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+
+  backend:
+    build:
+      context: ./Usermanagementbackend
+    container_name: user-backend
+    restart: always
+
+    ports:
+      - "8082:8082"
+
+    depends_on:
+      mysql-container:
+        condition: service_healthy
+
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-container:3306/sitdemo
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: System
+
+    networks:
+      - user-network
+
+
+  frontend:
+    build:
+      context: ./user_mgt_frontend
+    container_name: user-frontend
+    restart: always
+
+    ports:
+      - "3000:3000"
+
+    depends_on:
+      - backend
+
+    networks:
+      - user-network
+
+
+volumes:
+  mysql-data:
+
+networks:
+  user-network:
+    driver: bridge
