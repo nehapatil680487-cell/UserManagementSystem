@@ -211,13 +211,13 @@ docker ps
 
 ### ➕ Add User Page
 
-![Add User](screenshots/edit.png)
+![Add User](screenshots/register.png)
 
 ---
 
 ### ✏️ Update User Page
 
-![Update User](screenshots/register.png)
+![Update User](screenshots/edit.png)
 
 ---
 
